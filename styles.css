@@ -1,350 +1,1342 @@
-html, body {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
-}
-.demo-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 24px;
-}
-.demo-layout .mdl-layout__header .mdl-layout__drawer-button {
-  color: rgba(0, 0, 0, 0.54);
-}
-.mdl-layout__drawer .avatar {
-  margin-bottom: 16px;
-}
-.demo-drawer {
-  border: none;
-}
-/* iOS Safari specific workaround */
-.demo-drawer .mdl-menu__container {
-  z-index: -1;
-}
-.demo-drawer .demo-navigation {
-  z-index: -2;
-}
-/* END iOS Safari specific workaround */
-.demo-drawer .mdl-menu .mdl-menu__item {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.demo-drawer-header {
-  box-sizing: border-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding: 16px;
-  height: 151px;
-}
-.demo-avatar-dropdown {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
+body,
+html {
+  font-family : 'Roboto',
+                'Helvetica',
+                sans-serif;
 }
 
-.demo-navigation {
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+.demo-avatar {
+  width         : 48px;
+  height        : 48px;
+  border-radius : 24px;
 }
+
+.demo-layout .mdl-layout__header .mdl-layout__drawer-button {
+  color : rgba(0, 0, 0, 0.54);
+}
+
+.mdl-layout__drawer .avatar {
+  margin-bottom : 16px;
+}
+
+.demo-drawer {
+  border : none;
+}
+
+/* iOS Safari specific workaround */
+
+.demo-drawer .mdl-menu__container {
+  z-index : -1;
+}
+
+.demo-drawer .demo-navigation {
+  z-index : -2;
+}
+
+/* END iOS Safari specific workaround */
+
+.demo-drawer .mdl-menu .mdl-menu__item {
+  display             : -webkit-flex;
+  display             : -ms-flexbox;
+  display             : flex;
+  -webkit-align-items : center;
+  align-items         : center;
+  -ms-flex-align      : center;
+}
+
+.demo-drawer-header {
+  display                 : -webkit-flex;
+  display                 : -ms-flexbox;
+  display                 : flex;
+  box-sizing              : border-box;
+  height                  : 151px;
+  padding                 : 16px;
+  -ms-flex-direction      : column;
+  -webkit-flex-direction  : column;
+  flex-direction          : column;
+  -ms-flex-pack           : end;
+  -webkit-justify-content : flex-end;
+  justify-content         : flex-end;
+}
+
+.demo-avatar-dropdown {
+  display                : -webkit-flex;
+  display                : -ms-flexbox;
+  display                : flex;
+  position               : relative;
+  width                  : 100%;
+  -webkit-align-items    : center;
+  align-items            : center;
+  -ms-flex-align         : center;
+  -ms-flex-direction     : row;
+  -webkit-flex-direction : row;
+  flex-direction         : row;
+}
+
+.demo-navigation {}
+
 .demo-layout .demo-navigation .mdl-navigation__link {
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: rgba(255, 255, 255, 0.56);
-  font-weight: 500;
+  display                : -webkit-flex !important;
+  display                : -ms-flexbox !important;
+  display                : flex !important;
+  color                  : rgba(255, 255, 255, 0.56);
+  -webkit-align-items    : center;
+  align-items            : center;
+  font-weight            : 500;
+  -ms-flex-align         : center;
+  -ms-flex-direction     : row;
+  -webkit-flex-direction : row;
+  flex-direction         : row;
 }
+
 .demo-layout .demo-navigation .mdl-navigation__link:hover {
-  background-color: #00BCD4;
-  color: #37474F;
+  color            : #37474F;
+  background-color : #00BCD4;
 }
+
 .demo-navigation .mdl-navigation__link .material-icons {
-  font-size: 24px;
-  color: rgba(255, 255, 255, 0.56);
-  margin-right: 32px;
+  margin-right : 32px;
+  color        : rgba(255, 255, 255, 0.56);
+  font-size    : 24px;
 }
 
 .demo-content {
-  max-width: 1080px;
+  max-width : 1080px;
 }
 
 .demo-charts {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-align-items : center;
+  align-items         : center;
+  -ms-flex-align      : center;
 }
+
 .demo-chart:nth-child(1) {
-  color: #ACEC00;
+  color : #ACEC00;
 }
+
 .demo-chart:nth-child(2) {
-  color: #00BBD6;
+  color : #00BBD6;
 }
+
 .demo-chart:nth-child(3) {
-  color: #BA65C9;
+  color : #BA65C9;
 }
+
 .demo-chart:nth-child(4) {
-  color: #EF3C79;
+  color : #EF3C79;
 }
+
 .demo-graphs {
-  padding: 16px 32px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  display                : -webkit-flex;
+  display                : -ms-flexbox;
+  display                : flex;
+  padding                : 16px 32px;
+  -webkit-align-items    : stretch;
+  align-items            : stretch;
+  -ms-flex-align         : stretch;
+  -ms-flex-direction     : column;
+  -webkit-flex-direction : column;
+  flex-direction         : column;
 }
-/* TODO: Find a proper solution to have the graphs
- * not float around outside their container in IE10/11.
- * Using a browserhacks.com solution for now.
+
+/**
+ * TODO: Find a proper solution to have the graphs not float around outside
+ * their container in IE10/11. Using a browserhacks.com solution for now.
  */
-_:-ms-input-placeholder, :root .demo-graphs {
-  min-height: 664px;
+
+:root .demo-graphs,
+_:-ms-input-placeholder {
+  min-height : 664px;
 }
-_:-ms-input-placeholder, :root .demo-graph {
-  max-height: 300px;
+
+:root .demo-graph,
+_:-ms-input-placeholder {
+  max-height : 300px;
 }
+
 /* TODO end */
+
 .demo-graph:nth-child(1) {
-  color: #00b9d8;
+  color : #00b9d8;
 }
+
 .demo-graph:nth-child(2) {
-  color: #d9006e;
+  color : #d9006e;
 }
 
 .demo-cards {
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-align-content: flex-start;
-      -ms-flex-line-pack: start;
-          align-content: flex-start;
+  -webkit-align-content : flex-start;
+  align-content         : flex-start;
+  -webkit-align-items   : flex-start;
+  align-items           : flex-start;
+  -ms-flex-align        : start;
+  -ms-flex-line-pack    : start;
 }
+
 .demo-cards .demo-separator {
-  height: 32px;
+  height : 32px;
 }
+
 .demo-cards .mdl-card__title.mdl-card__title {
-  color: white;
-  font-size: 24px;
-  font-weight: 400;
+  color       : white;
+  font-size   : 24px;
+  font-weight : 400;
 }
+
 .demo-cards ul {
-  padding: 0;
+  padding : 0;
 }
+
 .demo-cards h3 {
-  font-size: 1em;
+  font-size : 1em;
 }
+
 .demo-updates .mdl-card__title {
-  min-height: 200px;
-  background-image: url('images/dog.png');
-  background-position: 90% 100%;
-  background-repeat: no-repeat;
+  min-height          : 200px;
+  background-image    : url('images/dog.png');
+  background-repeat   : no-repeat;
+  background-position : 90% 100%;
 }
+
 .demo-cards .mdl-card__actions a {
-  color: #00BCD4;
-  text-decoration: none;
+  color           : #00BCD4;
+  text-decoration : none;
 }
 
 .demo-options h3 {
-  margin: 0;
+  margin : 0;
 }
+
 .demo-options .mdl-checkbox__box-outline {
-  border-color: rgba(255, 255, 255, 0.89);
+  border-color : rgba(255, 255, 255, 0.89);
 }
+
 .demo-options ul {
-  margin: 0;
-  list-style-type: none;
+  margin          : 0;
+  list-style-type : none;
 }
+
 .demo-options li {
-  margin: 4px 0;
+  margin : 4px 0;
 }
+
 .demo-options .material-icons {
-  color: rgba(255, 255, 255, 0.89);
+  color : rgba(255, 255, 255, 0.89);
 }
+
 .demo-options .mdl-card__actions {
-  height: 64px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display             : -webkit-flex;
+  display             : -ms-flexbox;
+  display             : flex;
+  box-sizing          : border-box;
+  height              : 64px;
+  -webkit-align-items : center;
+  align-items         : center;
+  -ms-flex-align      : center;
 }
 
 .center {
-  text-align: center;
+  text-align : center;
 }
 
 .mdl-snackbar__icon {
-  color: #ffffff;
-  padding: 13px 0 0 24px;
+  padding : 13px 0 0 24px;
+  color   : #ffffff;
 }
 
 .mdl-switch {
-  margin-bottom: 6px;
+  margin-bottom : 6px;
 }
 
 .hidden {
-  display: none;
+  display : none;
 }
 
 .flipHidden {
-  display: none;
+  display : none;
 }
 
 .hover {
-  color: #4386f9 !important;
-  font-weight: bold;  
+  color       : #4386f9 !important;
+  font-weight : bold;
 }
 
 .mdl-data-table td {
-  padding: 4px 6px !important;
+  padding : 4px 6px !important;
 }
 
 .gridWrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  display               : grid;
+  grid-template-columns : 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .cardBG {
-  background: #d0d6db;
+  background : #d0d6db;
 }
 
 .imgBG {
-  background-image: url("images/bg.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/bg.png");
+  background-repeat : no-repeat;
 }
 
 .artificer {
-  background-image: url("images/artificer.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/artificer.png");
+  background-repeat : no-repeat;
 }
+
 .singularity {
-  background-image: url("images/singularity.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/singularity.png");
+  background-repeat : no-repeat;
 }
+
 .melvin {
-  background-image: url("images/melvin.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/melvin.png");
+  background-repeat : no-repeat;
 }
+
 .dave {
-  background-image: url("images/dave.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/dave.png");
+  background-repeat : no-repeat;
 }
+
 .steve {
-  background-image: url("images/steve.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/steve.png");
+  background-repeat : no-repeat;
 }
+
 .ascendant {
-  background-image: url("images/ascendant.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/ascendant.png");
+  background-repeat : no-repeat;
 }
+
 .craft {
-  background-image: url("images/craft.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/craft.png");
+  background-repeat : no-repeat;
 }
 
 .slayer {
-  background-image: url("images/slayer.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/slayer.png");
+  background-repeat : no-repeat;
 }
+
 .gladiator {
-  background-image: url("images/gladiator.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/gladiator.png");
+  background-repeat : no-repeat;
 }
+
 .champion {
-  background-image: url("images/champion.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/champion.png");
+  background-repeat : no-repeat;
 }
 
 .assassin {
-  background-image: url("images/assassin.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/assassin.png");
+  background-repeat : no-repeat;
 }
+
 .saboteur {
-  background-image: url("images/saboteur.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/saboteur.png");
+  background-repeat : no-repeat;
 }
+
 .trickster {
-  background-image: url("images/trickster.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/trickster.png");
+  background-repeat : no-repeat;
 }
 
 .juggernaut {
-  background-image: url("images/juggernaut.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/juggernaut.png");
+  background-repeat : no-repeat;
 }
+
 .berserker {
-  background-image: url("images/berserker.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/berserker.png");
+  background-repeat : no-repeat;
 }
+
 .chieftain {
-  background-image: url("images/chieftain.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/chieftain.png");
+  background-repeat : no-repeat;
 }
 
 .necromancer {
-  background-image: url("images/necromancer.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/necromancer.png");
+  background-repeat : no-repeat;
 }
+
 .elementalist {
-  background-image: url("images/elementalist.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/elementalist.png");
+  background-repeat : no-repeat;
 }
+
 .occultist {
-  background-image: url("images/occultist.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/occultist.png");
+  background-repeat : no-repeat;
 }
 
 .deadeye {
-  background-image: url("images/deadeye.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/deadeye.png");
+  background-repeat : no-repeat;
 }
+
 .raider {
-  background-image: url("images/raider.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/raider.png");
+  background-repeat : no-repeat;
 }
+
 .pathfinder {
-  background-image: url("images/pathfinder.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/pathfinder.png");
+  background-repeat : no-repeat;
 }
 
 .inquisitor {
-  background-image: url("images/inquisitor.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/inquisitor.png");
+  background-repeat : no-repeat;
 }
+
 .hierophant {
-  background-image: url("images/hierophant.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/hierophant.png");
+  background-repeat : no-repeat;
 }
+
 .guardian {
-  background-image: url("images/guardian.png");
-  background-repeat: no-repeat;
+  background-image  : url("images/guardian.png");
+  background-repeat : no-repeat;
+}
+.cur20-1{background:url('images/currency_20.png') no-repeat 0 0;width:20px;height:20px}
+.cur20-2 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -21px 0;
+}
+
+.cur20-3 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -42px 0;
+}
+
+.cur20-4 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -63px 0;
+}
+
+.cur20-5 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -84px 0;
+}
+
+.cur20-6 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -105px 0;
+}
+
+.cur20-7 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -126px 0;
+}
+
+.cur20-8 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -147px 0;
+}
+
+.cur20-9 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -168px 0;
+}
+
+.cur20-10 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -189px 0;
+}
+
+.cur20-11 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -210px 0;
+}
+
+.cur20-12 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -231px 0;
+}
+
+.cur20-13 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -252px 0;
+}
+
+.cur20-14 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -273px 0;
+}
+
+.cur20-15 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -294px 0;
+}
+
+.cur20-16 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -315px 0;
+}
+
+.cur20-17 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -336px 0;
+}
+
+.cur20-18 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -357px 0;
+}
+
+.cur20-19 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -378px 0;
+}
+
+.cur20-20 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -399px 0;
+}
+
+.cur20-21 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -420px 0;
+}
+
+.cur20-22 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -441px 0;
+}
+
+.cur20-23 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -462px 0;
+}
+
+.cur20-24 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -483px 0;
+}
+
+.cur20-25 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -504px 0;
+}
+
+.cur20-26 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -525px 0;
+}
+
+.cur20-35 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -546px 0;
+}
+
+.cur20-27 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -567px 0;
+}
+
+.cur20-28 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -588px 0;
+}
+
+.cur20-29 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -609px 0;
+}
+
+.cur20-30 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -630px 0;
+}
+
+.cur20-31 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -651px 0;
+}
+
+.cur20-32 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -672px 0;
+}
+
+.cur20-33 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -693px 0;
+}
+
+.cur20-34 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -714px 0;
+}
+
+.cur20-36 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -735px 0;
+}
+
+.cur20-37 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -756px 0;
+}
+
+.cur20-38 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -777px 0;
+}
+
+.cur20-39 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -798px 0;
+}
+
+.cur20-40 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -819px 0;
+}
+
+.cur20-41 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -840px 0;
+}
+
+.cur20-42 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -861px 0;
+}
+
+.cur20-43 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -882px 0;
+}
+
+.cur20-44 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -903px 0;
+}
+
+.cur20-45 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -924px 0;
+}
+
+.cur20-46 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -945px 0;
+}
+
+.cur20-47 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -966px 0;
+}
+
+.cur20-48 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -987px 0;
+}
+
+.cur20-49 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1008px 0;
+}
+
+.cur20-50 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1029px 0;
+}
+
+.cur20-51 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1050px 0;
+}
+
+.cur20-52 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1071px 0;
+}
+
+.cur20-53 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1092px 0;
+}
+
+.cur20-54 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1113px 0;
+}
+
+.cur20-55 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1134px 0;
+}
+
+.cur20-56 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1155px 0;
+}
+
+.cur20-57 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1176px 0;
+}
+
+.cur20-58 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1197px 0;
+}
+
+.cur20-59 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1806px 0;
+}
+
+.cur20-60 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1239px 0;
+}
+
+.cur20-61 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1260px 0;
+}
+
+.cur20-62 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1281px 0;
+}
+
+.cur20-63 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1302px 0;
+}
+
+.cur20-64 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1323px 0;
+}
+
+.cur20-65 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1344px 0;
+}
+
+.cur20-66 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1365px 0;
+}
+
+.cur20-76 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1386px 0;
+}
+
+.cur20-95 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1407px 0;
+}
+
+.cur20-96 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1428px 0;
+}
+
+.cur20-97 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1449px 0;
+}
+
+.cur20-67 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1470px 0;
+}
+
+.cur20-68 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1491px 0;
+}
+
+.cur20-69 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1512px 0;
+}
+
+.cur20-70 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1533px 0;
+}
+
+.cur20-71 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1554px 0;
+}
+
+.cur20-72 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1575px 0;
+}
+
+.cur20-73 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1596px 0;
+}
+
+.cur20-74 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1617px 0;
+}
+
+.cur20-75 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1638px 0;
+}
+
+.cur20-77 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1659px 0;
+}
+
+.cur20-78 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1680px 0;
+}
+
+.cur20-79 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1701px 0;
+}
+
+.cur20-80 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1722px 0;
+}
+
+.cur20-81 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1743px 0;
+}
+
+.cur20-82 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1764px 0;
+}
+
+.cur20-83 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1785px 0;
+}
+
+.cur20-84 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1218px 0;
+}
+
+.cur20-85 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1827px 0;
+}
+
+.cur20-86 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1848px 0;
+}
+
+.cur20-87 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1869px 0;
+}
+
+.cur20-88 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1890px 0;
+}
+
+.cur20-89 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1911px 0;
+}
+
+.cur20-90 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1932px 0;
+}
+
+.cur20-91 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1953px 0;
+}
+
+.cur20-92 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1974px 0;
+}
+
+.cur20-93 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -1995px 0;
+}
+
+.cur20-94 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2016px 0;
+}
+
+.cur20-98 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2037px 0;
+}
+
+.cur20-99 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2058px 0;
+}
+
+.cur20-100 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2079px 0;
+}
+
+.cur20-101 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2100px 0;
+}
+
+.cur20-102 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2121px 0;
+}
+
+.cur20-103 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2142px 0;
+}
+
+.cur20-104 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2163px 0;
+}
+
+.cur20-105 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2184px 0;
+}
+
+.cur20-106 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2205px 0;
+}
+
+.cur20-107 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2226px 0;
+}
+
+.cur20-108 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2247px 0;
+}
+
+.cur20-109 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2268px 0;
+}
+
+.cur20-110 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2289px 0;
+}
+
+.cur20-111 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2310px 0;
+}
+
+.cur20-112 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2331px 0;
+}
+
+.cur20-113 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2352px 0;
+}
+
+.cur20-114 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2373px 0;
+}
+
+.cur20-115 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2394px 0;
+}
+
+.cur20-116 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2415px 0;
+}
+
+.cur20-117 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2436px 0;
+}
+
+.cur20-118 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2457px 0;
+}
+
+.cur20-119 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2478px 0;
+}
+
+.cur20-120 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2499px 0;
+}
+
+.cur20-121 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2520px 0;
+}
+
+.cur20-122 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2541px 0;
+}
+
+.cur20-123 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2562px 0;
+}
+
+.cur20-124 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2583px 0;
+}
+
+.cur20-125 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2604px 0;
+}
+
+.cur20-126 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2625px 0;
+}
+
+.cur20-127 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2646px 0;
+}
+
+.cur20-128 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2667px 0;
+}
+
+.cur20-129 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2688px 0;
+}
+
+.cur20-130 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2709px 0;
+}
+
+.cur20-131 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2730px 0;
+}
+
+.cur20-494 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2751px 0;
+}
+
+.cur20-512 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2772px 0;
+}
+
+.cur20-513 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2793px 0;
+}
+
+.cur20-514 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2814px 0;
+}
+
+.cur20-515 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2835px 0;
+}
+
+.cur20-516 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2856px 0;
+}
+
+.cur20-517 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2877px 0;
+}
+
+.cur20-518 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2898px 0;
+}
+
+.cur20-519 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2919px 0;
+}
+
+.cur20-520 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2940px 0;
+}
+
+.cur20-521 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2961px 0;
+}
+
+.cur20-630 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -2982px 0;
+}
+
+.cur20-632 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -3003px 0;
+}
+
+.cur20-633 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -3024px 0;
+}
+
+.cur20-634 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -3045px 0;
+}
+
+.cur20-635 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -3066px 0;
+}
+
+.cur20-636 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -3087px 0;
+}
+
+.cur20-637 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -3108px 0;
+}
+
+.cur20-638 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -3129px 0;
+}
+
+.cur20-639 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -3150px 0;
+}
+
+.cur20-640 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -3171px 0;
+}
+
+.cur20-641 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -3192px 0;
+}
+
+.cur20-642 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -3213px 0;
+}
+
+.cur20-643 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -3234px 0;
+}
+
+.cur20-708 {
+  width      : 20px;
+  height     : 20px;
+  background : url('images/currency_20.png?3997835056') no-repeat -3255px 0;
+}
+.currency {
+    line-height: 20px !important;
+}
+.fl {
+    float:left;
+    margin-top:-1px;
 }
