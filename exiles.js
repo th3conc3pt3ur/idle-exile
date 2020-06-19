@@ -46,7 +46,10 @@ class Exile {
 	};
 
 	lvlGear(init = false) {
-		if (this.gear == 0) { //Magic flasks
+		if(init) {
+			this.gear--;
+		}
+		if (this.gear == 0 || this.gear == -1) { //Magic flasks
 		if ((Transmutation.total >= 5 && Augmentation.total >= 5) || init == true) {
 			if(!init) {
 				Transmutation.total -= 5;
@@ -550,7 +553,9 @@ class Exile {
 		} else { SnackBar("Requirements not met.");
 		}
 	}
-
+	if(init) {
+		this.gear++;
+	}
 	};
 
 	lvlLinks(init = false) {
@@ -824,8 +829,9 @@ Hierophant = new Exile('Hierophant','0','0','525','0','0','0','0'),
 Guardian = new Exile('Guardian','0','0','525','0','0','0','0'),
 Melvin = new Exile('Melvin','0','0','525','0','0','0','0'),
 ];
-Singularity = new Exile('Singularity','0','0','525','0','0','0','0'); //flipper
-Artificer = new Exile('Artificer','0','0','525','0','0','0','0'); //crafter
+Singularity = new Exile('Singularity','0','0','525','0','0','0','0'), //flipper
+Artificer = new Exile('Artificer','0','0','525','0','0','0','0'), //crafter
+
 
 setInterval (function gameTick() {
 	let tempLevel = 0;

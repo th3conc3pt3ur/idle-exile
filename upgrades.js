@@ -14,7 +14,9 @@ var flippingSpeed = 1;
 var flippingSpeedCost = 1;
 
 setInterval (function updateTick() { //checks if upgrade conditions are met.
-	currencyTab();
+	if(currencyStashTab == 0){
+		currencyTab();
+	}	
 	delveTab();
 	quadTab();
 	iiqUpgrade();
@@ -76,16 +78,16 @@ function hoverUpgrades(name,a,b) {
 //---Upgrades
 function currencyTab() {
 	if (totalLevel >= 250) {
-	$("#UpgradeTable").append(
-			'<tr id="currencyTab">'+
-                '<td class="mdl-data-table__cell--non-numeric"><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored currencyTabButton" onclick="buyCurrencyTab();">Currency Stash Tab</button></td>'+
-	            '<td class="mdl-data-table__cell--non-numeric">Purchase the Currency Stash Tab</td>'+
-	            '<td class="mdl-data-table__cell--non-numeric">+1.0</td>'+
-	            '<td class="mdl-data-table__cell--non-numeric">5 Stacked Deck</td>'+
-            '</tr>'
-		);
-	hoverUpgrades("currencyTab","StackedDeck");
-	currencyTab = noOp;
+		$("#UpgradeTable").append(
+				'<tr id="currencyTab">'+
+					'<td class="mdl-data-table__cell--non-numeric"><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored currencyTabButton" onclick="buyCurrencyTab();">Currency Stash Tab</button></td>'+
+					'<td class="mdl-data-table__cell--non-numeric">Purchase the Currency Stash Tab</td>'+
+					'<td class="mdl-data-table__cell--non-numeric">+1.0</td>'+
+					'<td class="mdl-data-table__cell--non-numeric">5 Stacked Deck</td>'+
+				'</tr>'
+			);
+		hoverUpgrades("currencyTab","StackedDeck");
+		currencyTab = noOp;
 	}
 }
 
