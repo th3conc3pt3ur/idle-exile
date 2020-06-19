@@ -12,7 +12,7 @@ function gameStart() {
 	$(".craft").hide();
 
 	$("#loader").hide();
-	
+
 }
 
 function welcome() {
@@ -52,7 +52,7 @@ function showGuild() {
 	$("#crafting").hide();
 	$("#delving").hide();
 	$("#info").hide();
-	
+
 }
 
 function showFlipping() {
@@ -71,7 +71,7 @@ function showFlipping() {
 	$("#MainCurrency").removeClass("mdl-cell--3-col-tablet");
 	$("#MainCurrency").addClass("mdl-cell--4-col");
 	$("#MainCurrency").addClass("mdl-cell--4-col-tablet");
-	
+
 }
 
 function showCrafting() {
@@ -81,7 +81,7 @@ function showCrafting() {
 	$("#crafting").show();
 	$("#delving").hide();
 	$("#info").hide();
-	
+
 }
 
 function showDelving() {
@@ -91,7 +91,7 @@ function showDelving() {
 	$("#crafting").hide();
 	$("#delving").show();
 	$("#info").hide();
-	
+
 }
 
 function showInfo() {
@@ -101,7 +101,7 @@ function showInfo() {
 	$("#crafting").hide();
 	$("#delving").hide();
 	$("#info").show();
-	
+
 }
 
 //---Show upgrades
@@ -153,26 +153,75 @@ function hoverMenu() {
 //----------------------------------Start Functions
 gameStart();
 hoverMenu();
+$(document).ready(function() {
+	load_game();
+});
 
 //---File Handling
-// window.setInterval(function saveGame() {
-//    localStorage['goeSaveCurrency'] = btoa(JSON.stringify(Currency));
-//    localStorage['goeSaveExile'] = btoa(JSON.stringify(Exile));
-// }, 30000);
-// function saveGameManual() {
-//    localStorage['goeSaveCurrency'] = btoa(JSON.stringify(Currency));
-//    localStorage['goeSaveExile'] = btoa(JSON.stringify(Exile));
-// }
+window.setInterval(function saveGame() {
+   console.log("saveGame");
+   localStorage['goeSaveCurrency'] = JSON.stringify(currencyData);
+   localStorage['goeSaveExiles'] = JSON.stringify(exileData);
+}, 30000);
 
-// function load_game() {
-//     if (!localStorage['goeSave']) return;
-//     var goeSaveCurrency = JSON.parse(atob(localStorage['goeSaveCurrency']));
-//     var goeSaveExiles = JSON.parse(atob(localStorage['goeSaveExiles']));
-//     Currency = goeSaveCurrency;
-//     Exiles = goeSaveExiles;
-// //update all info on screen
- 
-// }
+function saveGameManual() {
+   localStorage['goeSaveCurrency'] = JSON.stringify(currencyData);
+   localStorage['goeSaveExiles'] = JSON.stringify(exileData);
+}
+
+function load_game() {
+	console.log("load_game");
+    if (!localStorage['goeSaveCurrency']) return;
+
+	var goeSaveCurrency = JSON.parse(localStorage['goeSaveCurrency']);
+	var goeSaveExiles = JSON.parse(localStorage['goeSaveExiles']);
+	
+	
+    //Currency = goeSaveCurrency;
+	//Exiles = goeSaveExiles;
+	exileData = [];
+	
+	for(var i = 0;i < goeSaveExiles.length;i++) {
+		exileData.push(
+			eval(goeSaveExiles[i].name+ " = new Exile('"+goeSaveExiles[i].name+"',"+goeSaveExiles[i].level+","+goeSaveExiles[i].exp+","+goeSaveExiles[i].expToLevel+","+goeSaveExiles[i].dropRate+","+goeSaveExiles[i].gear+","+goeSaveExiles[i].links+","+goeSaveExiles[i].rerollLevel+")")	
+		);
+		if(goeSaveExiles[i].level > 0) {
+			$('.'+goeSaveExiles[i].name+'Buy').remove();
+			$('.'+goeSaveExiles[i].name+'Hide').remove();
+		}
+
+		$("#UpgradeGearTable").append(
+			'<tr id="'+goeSaveExiles[i].name+'GearUpgrade">'+
+                '<td class="mdl-data-table__cell--non-numeric"><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored '+goeSaveExiles[i].name+'GearButton" onclick="buyGear('+goeSaveExiles[i].name+');">'+goeSaveExiles[i].name+' Gear'+'</button></td>'+
+	            '<td class="mdl-data-table__cell--non-numeric">Upgrade '+goeSaveExiles[i].name+' flasks to Magic rarity</td>'+
+	            '<td class="mdl-data-table__cell--non-numeric">+0.1 ('+goeSaveExiles[i].name+')</td>'+
+	            '<td class="mdl-data-table__cell--non-numeric">5 Transmutation<br>5 Augmentation</td>'+
+            '</tr>'
+		);
+		$("#UpgradeLinksTable").append(
+			'<tr id="'+goeSaveExiles[i].name+'LinksUpgrade">'+
+                '<td class="mdl-data-table__cell--non-numeric"><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored '+goeSaveExiles[i].name+'LinksButton" onclick="buyLinks('+goeSaveExiles[i].name+');">'+goeSaveExiles[i].name+' Links</button></td>'+
+                '<td class="mdl-data-table__cell--non-numeric">Upgrade '+goeSaveExiles[i].name+' links to 4L</td>'+
+                '<td class="mdl-data-table__cell--non-numeric">+0.5 ('+goeSaveExiles[i].name+')</td>'+
+                '<td class="mdl-data-table__cell--non-numeric">10 Jeweller<br>10 Fusing</td>'+
+            '</tr>'
+		);
+		
+		eval(goeSaveExiles[i].name).lvlGear(true);
+		eval(goeSaveExiles[i].name).lvlLinks(true)
+
+	}    
+	currencyData = [];
+	for(var i = 0;i < goeSaveCurrency.length;i++) {
+		currencyData.push(
+			eval(goeSaveCurrency[i].name+"  = new Currency('"+goeSaveCurrency[i].name+"',"+goeSaveCurrency[i].rate+","+goeSaveCurrency[i].total+","+goeSaveCurrency[i].sellRate+","+goeSaveCurrency[i].sellPercent+","+goeSaveCurrency[i].buyRate+","+goeSaveCurrency[i].buyPercent+")")
+		);
+	}
+	console.log("data_load");
+	welcome();
+//update all info on screen
+
+}
 
 // function delete_game() {
 //     localStorage.clear();

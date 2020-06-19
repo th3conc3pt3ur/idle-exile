@@ -3,4 +3,9 @@ Humble Fork of https://github.com/Oosband/oosband.github.io for add custom featu
 
 # Roadmap
 - Add Save/Load functionnality
+    - :heavy_check_mark: save/load currency
+    - :heavy_check_mark: save/load exiles
+    - :x: save/load Singularity
+    - :x: save/load Artificer
+    - :x: save/load flipping config
 
