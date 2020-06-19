@@ -1340,3 +1340,7 @@ _:-ms-input-placeholder {
     float:left;
     margin-top:-1px;
 }
+.currencyIcon {
+  width:20px;
+  height:20px;
+}
